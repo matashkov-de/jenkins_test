@@ -14,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 
 public class JenkinsAllureTest {
     private static final String searchValue = "Selenide";
-    private static final String visibleTab = "Issues";
+    private static final String visibleTab = "ueu";
 
     @BeforeAll
     static void beforeAll(){
