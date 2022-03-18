@@ -18,15 +18,12 @@ public class JenkinsAllureTest {
 
     @BeforeAll
     static void beforeAll(){
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = System.getProperty("browserSize");
         Configuration.browser = System.getProperty("browser", "chrome");
 
         //password and user for remote browser
         String login = System.getProperty("login");
         String password = System.getProperty("password");
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        Configuration.browserCapabilities = capabilities;
         Configuration.remote = "https://" + login + ":" + password + "@selenoid.autotests.cloud/wd/hub";
 
     }
