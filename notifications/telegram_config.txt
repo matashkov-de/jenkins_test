@@ -14,5 +14,5 @@ java \
 // bot command  in many lines (\ as separator)
 curl -X POST \
      -H 'Content-Type: application/json' \
-     -d '{"chat_id": "-1001627830931", "text": "This is a test from qa.guru"}' \
+     -d '{"chat_id": "975341929", "text": "This is a test from qa.guru"}' \
      https://api.telegram.org/bot5223071799:AAGUADnvxTsCajShtotUMSYkHftC1hESkrY/sendMessage
