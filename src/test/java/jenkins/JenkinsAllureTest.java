@@ -22,9 +22,9 @@ public class JenkinsAllureTest {
         Configuration.browser = System.getProperty("browser", "chrome");
 
         //password and user for remote browser
-        String login = System.getProperty("login");
-        String password = System.getProperty("password");
-        Configuration.remote = "https://" + login + ":" + password + "@selenoid.autotests.cloud/wd/hub";
+        //String login = System.getProperty("login");
+       // String password = System.getProperty("password");
+       // Configuration.remote = "https://" + login + ":" + password + "@selenoid.autotests.cloud/wd/hub";
 
     }
 
