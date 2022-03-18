@@ -26,8 +26,6 @@ public class JenkinsAllureTest {
         String password = System.getProperty("password");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = "https://" + login + ":" + password + "@selenoid.autotests.cloud/wd/hub";
 
