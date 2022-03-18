@@ -5,6 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -19,6 +20,16 @@ public class JenkinsAllureTest {
     static void beforeAll(){
         Configuration.browserSize = "1920x1080";
         Configuration.browser = System.getProperty("browser", "chrome");
+
+        //password and user for remote browser
+        String login = System.getProperty("login");
+        String password = System.getProperty("password");
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
+        Configuration.remote = "https://" + login + ":" + password + "@selenoid.autotests.cloud/wd/hub";
 
     }
 
